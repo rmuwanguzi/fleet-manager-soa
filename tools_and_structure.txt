@@ -1,0 +1,10 @@
+Database-> SQLSERVER
+ORM->Enitity Framework,Dapper
+.Net Framework-> 4.5.2
+DI-Container-> Autofac
+
+Structure
+ -FleetManager.Server
+   -FleetManager.Services 
+    -FleetManager.DbBase
+      -FleetManager.Shared
