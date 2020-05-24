@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBBCDBCA-8DFA-4757-9FAF-A8E96E0CFEFB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FleetManaged.Shared</RootNamespace>
+    <AssemblyName>FleetManager.Shared</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\..\..\..\Desktop\GKO\InvoicerApp\Shared\Invoicer.Shared\bin\Debug\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Extensions.cs" />
+    <Compile Include="Core\IServiceFactory.cs" />
+    <Compile Include="Core\ObjectBase.cs" />
+    <Compile Include="Core\ServiceFactory.cs" />
+    <Compile Include="Core\SimpleMapper.cs" />
+    <Compile Include="dto\dto_creditor_depositC.cs" />
+    <Compile Include="dto\dto_creditor_update_opening_cr_balanceC.cs" />
+    <Compile Include="dto\dto_project_remove_fuelstationC.cs" />
+    <Compile Include="dto\dto_project_assign_fuelstationC.cs" />
+    <Compile Include="dto\dto_expense_trans_voucher_newC.cs" />
+    <Compile Include="dto\dto_fuel_station_updateC.cs" />
+    <Compile Include="dto\dto_fuel_station_newC.cs" />
+    <Compile Include="dto\dto_mechanic_newC.cs" />
+    <Compile Include="dto\dto_mechanic_updateC.cs" />
+    <Compile Include="dto\dto_project_newC.cs" />
+    <Compile Include="dto\dto_project_updateC.cs" />
+    <Compile Include="dto\dto_security_group_assign_userC.cs" />
+    <Compile Include="dto\dto_check_software_update_requestC.cs" />
+    <Compile Include="dto\dto_check_software_update_responseC.cs" />
+    <Compile Include="dto\dto_driver_newC.cs" />
+    <Compile Include="dto\dto_driver_updateC.cs" />
+    <Compile Include="dto\dto_expense_trans_newC.cs" />
+    <Compile Include="dto\dto_expense_trans_fieldC.cs" />
+    <Compile Include="dto\dto_expense_type_field_item_updateC.cs" />
+    <Compile Include="dto\dto_expense_type_field_updateC.cs" />
+    <Compile Include="dto\dto_expense_type_field_new.cs" />
+    <Compile Include="dto\dto_expense_type_field_item_newC.cs" />
+    <Compile Include="dto\dto_expense_type_updateC.cs" />
+    <Compile Include="dto\dto_date_rangeC.cs" />
+    <Compile Include="dto\dto_fs_rangeC.cs" />
+    <Compile Include="dto\dto_init_dataC.cs" />
+    <Compile Include="dto\dto_month_partitionC.cs" />
+    <Compile Include="dto\dto_refresh_tokenC.cs" />
+    <Compile Include="dto\dto_security_group_assign_rightsC.cs" />
+    <Compile Include="dto\dto_security_group_newC.cs" />
+    <Compile Include="dto\dto_security_group_updateC.cs" />
+    <Compile Include="dto\dto_team_leader_newC.cs" />
+    <Compile Include="dto\dto_team_leader_updateC.cs" />
+    <Compile Include="dto\dto_vehicle_category_updateC.cs" />
+    <Compile Include="dto\dto_logged_user.cs" />
+    <Compile Include="dto\dto_login.cs" />
+    <Compile Include="dto\dto_pc_login_access_updateC.cs" />
+    <Compile Include="dto\dto_pc_userC.cs" />
+    <Compile Include="dto\dto_pc_user_change_password.cs" />
+    <Compile Include="dto\dto_pc_user_newC.cs" />
+    <Compile Include="dto\dto_pc_user_rights_updateC.cs" />
+    <Compile Include="dto\dto_pc_user_updateC.cs" />
+    <Compile Include="dto\dto_vehicle_expense_recentC.cs" />
+    <Compile Include="dto\dto_vehicle_newC.cs" />
+    <Compile Include="dto\dto_vehicle_owner_newC.cs" />
+    <Compile Include="dto\dto_vehicle_owner_updateC.cs" />
+    <Compile Include="dto\dto_vehicle_updateC.cs" />
+    <Compile Include="dto\dto_expense_type_newC.cs" />
+    <Compile Include="dto\dto_vehicle_category_newC.cs" />
+    <Compile Include="dto\dto_vehicleExpenseDetailParameterC.cs" />
+    <Compile Include="em.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Interfaces\common\ICheckForSoftwareUpdatesService.cs" />
+    <Compile Include="Interfaces\ICreditorService.cs" />
+    <Compile Include="Interfaces\IFuelStationService.cs" />
+    <Compile Include="Interfaces\IDriverService.cs" />
+    <Compile Include="Interfaces\IExpenseService.cs" />
+    <Compile Include="Interfaces\IExpenseTypeFieldItemService.cs" />
+    <Compile Include="Interfaces\IExpenseTypeFieldService.cs" />
+    <Compile Include="Interfaces\IExpenseTypeService.cs" />
+    <Compile Include="Interfaces\common\ILoggedInUserService.cs" />
+    <Compile Include="Interfaces\common\ILoginService.cs" />
+    <Compile Include="Interfaces\common\IMessageDialog.cs" />
+    <Compile Include="Interfaces\IMechanicService.cs" />
+    <Compile Include="Interfaces\InitDataService.cs" />
+    <Compile Include="Interfaces\common\IPCLSettings.cs" />
+    <Compile Include="Interfaces\common\IRefreshTokenService.cs" />
+    <Compile Include="Interfaces\common\IResetDbService.cs" />
+    <Compile Include="Interfaces\common\ISecurityGroupService.cs" />
+    <Compile Include="Interfaces\common\IService.cs" />
+    <Compile Include="Interfaces\common\IServiceCore.cs" />
+    <Compile Include="Interfaces\common\IServiceCoreSingle.cs" />
+    <Compile Include="Interfaces\common\ITokenService.cs" />
+    <Compile Include="Interfaces\IProjectService.cs" />
+    <Compile Include="Interfaces\ITeamLeaderService.cs" />
+    <Compile Include="Interfaces\IUserService.cs" />
+    <Compile Include="Interfaces\IVehicleCatService.cs" />
+    <Compile Include="Interfaces\IVehicleOwnerService.cs" />
+    <Compile Include="Interfaces\IVehicleService.cs" />
+    <Compile Include="Models\sync\assign_project_fuel_stationC.cs" />
+    <Compile Include="Models\common\deletefieldsC.cs" />
+    <Compile Include="Models\sync\creditorC.cs" />
+    <Compile Include="Models\creditor_depositC.cs" />
+    <Compile Include="Models\creditor_invoiceC.cs" />
+    <Compile Include="Models\creditor_invoice_paymentC.cs" />
+    <Compile Include="Models\creditor_trans_statementC.cs" />
+    <Compile Include="Models\sync\fuel_stationC.cs" />
+    <Compile Include="Models\sync\mechanicC.cs" />
+    <Compile Include="Models\sync\projectC.cs" />
+    <Compile Include="Models\sync\security_groupC.cs" />
+    <Compile Include="Models\sync\team_leaderC.cs" />
+    <Compile Include="Models\sync\vehicle_ownerC.cs" />
+    <Compile Include="Models\sync\vh_expense_trans_fieldC.cs" />
+    <Compile Include="Models\sync\pc_userC.cs" />
+    <Compile Include="Models\common\serverC.cs" />
+    <Compile Include="Models\sync\vehicleC.cs" />
+    <Compile Include="Models\sync\vh_categoryC.cs" />
+    <Compile Include="Models\sync\vh_driverC.cs" />
+    <Compile Include="Models\sync\vh_expense_transC.cs" />
+    <Compile Include="Models\sync\vh_expense_trans_voucherC.cs" />
+    <Compile Include="Models\sync\vh_expense_typeC.cs" />
+    <Compile Include="Models\sync\vh_expense_type_fieldC.cs" />
+    <Compile Include="Models\sync\vh_expense_type_field_d_itemC.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
